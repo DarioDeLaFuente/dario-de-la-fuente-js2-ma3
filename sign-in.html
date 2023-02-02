@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS 2 MA3</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+  </head>
+  <body class="text-center pt-5">
+    <header>
+      <!--<div class="menu-container"></div>-->
+      <!--<a href="/">Home</a>
+      <a href="/sign-in.html">Sign in</a>-->
+    </header>
+    <main class="d-flex justify-content-center my-5 pt-5">
+      <form action="" id="contactForm" class="form-signin w-50 m-auto my-5 pt-5">
+        <img class="mb-4" src="" alt="" width="72" height="57" />
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <div class="massage-container"></div>
+        <div class="form-floating">
+          <input name="email" class="form-control" id="email" placeholder="name@example.com" />
+          <label for="email">Email address</label>
+          <div class="Form-error" id="emailError"></div>
+          <!-- Please enter a valid email address -->
+        </div>
+        <div class="form-floating mt-3">
+          <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+          />
+          <label for="password">Password</label>
+          <div class="Form-error" id="passwordError"></div>
+          <!-- Please enter a valid password -->
+        </div>
+        <button class="w-100 btn btn-lg btn-primary mt-3">Sign in</button>
+        <!-- type="submit" -->
+        <p class="mt-5 mb-3 text-muted">MA3</p>
+      </form>
+    </main>
+    <!--<footer></footer>-->
+    <script src="js/form.js" type="module"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></>
+  </body>
+</html>

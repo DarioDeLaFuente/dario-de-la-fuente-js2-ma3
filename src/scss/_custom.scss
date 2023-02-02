@@ -1,0 +1,17 @@
+.form-signin {
+  margin-top: 10%;
+}
+.message {
+  color: red;
+}
+
+@media (max-width: 576px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
