@@ -13,7 +13,6 @@ export default function createMenu() {
   }>Login</a>`;
 
   if (!username) {
-    //authLink = `<a href="sign-in.html">Login</a>`;
     location.reload();
     window.location.href = "/sign-in.html";
   } else {
@@ -22,9 +21,10 @@ export default function createMenu() {
   }
   console.log(username);
 
-  container.innerHTML = `<div class="menu">
-                              <a href="/" class="${pathname === "/" ? "active" : ""}">Home</a>
-                              ${authLink}   
-                           </div>`;
+  container.innerHTML = `
+    <div class="menu">
+        <a href="/" class="${pathname === "/" ? "active" : ""}">Home</a>
+        ${authLink}   
+    </div>`;
   logoutButton();
 }

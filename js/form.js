@@ -1,16 +1,13 @@
 import { baseUrl } from "./contens/api.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 import displayMessage from "./components/common/displayMassage.js";
-//import createMenu from "./components/common/createMenu.js";
 
 const form = document.querySelector("#contactForm");
 const email = document.querySelector("#email");
-//const emailError = document.querySelector("#emailError");
-const password = document.querySelector("#password");
-//const passwordError = document.querySelector("#passwordError");
-const massage = document.querySelector(".massage-container");
 
-//createMenu();
+const password = document.querySelector("#password");
+
+const massage = document.querySelector(".massage-container");
 
 form.addEventListener("submit", validateForm);
 
@@ -22,8 +19,11 @@ function validateForm(event) {
   const usernameValue = email.value.trim();
   const passwordValue = password.value.trim();
 
-  if (usernameValue.length === 0 || passwordValue.length === 0) {
-    return displayMessage("message", "Invalid values", ".massage-container");
+  if (usernameValue.length === 0) {
+    return displayMessage("message", "Mising username", ".massage-container");
+  }
+  if (passwordValue.length === 0) {
+    return displayMessage("message", "Mising password", ".massage-container");
   }
   login(usernameValue, passwordValue);
 }
@@ -48,12 +48,20 @@ async function login(email, password) {
 
       saveToken(json.jwt);
       saveUser(json.user);
-      location.href = "/index.html";
+      //location.href = "/index.html";
+
+      //url to Sucsessfully logged in
+      location.href = "/sucsses.html";
     }
     if (json.error) {
-      displayMessage("message", "Invalid login values", ".massage-container");
+      displayMessage("message", "Invalid username or password", ".massage-container");
     }
   } catch (error) {
     console.log(error);
+    displayMessage(
+      "message",
+      "SyntaxError: 405 Unexpected token `Method Not Allowed`",
+      ".massage-container"
+    );
   }
 }

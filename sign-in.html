@@ -9,20 +9,19 @@
   </head>
   <body class="text-center pt-5">
     <header>
-      <!--<div class="menu-container"></div>-->
-      <!--<a href="/">Home</a>
-      <a href="/sign-in.html">Sign in</a>-->
     </header>
     <main class="d-flex justify-content-center my-5 pt-5">
       <form action="" id="contactForm" class="form-signin w-50 m-auto my-5 pt-5">
-        <img class="mb-4" src="" alt="" width="72" height="57" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+          <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
+          <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"/>
+        </svg>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
         <div class="massage-container"></div>
         <div class="form-floating">
-          <input name="email" class="form-control" id="email" placeholder="name@example.com" />
+          <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com" />
           <label for="email">Email address</label>
           <div class="Form-error" id="emailError"></div>
-          <!-- Please enter a valid email address -->
         </div>
         <div class="form-floating mt-3">
           <input
@@ -34,10 +33,8 @@
           />
           <label for="password">Password</label>
           <div class="Form-error" id="passwordError"></div>
-          <!-- Please enter a valid password -->
         </div>
         <button class="w-100 btn btn-lg btn-primary mt-3">Sign in</button>
-        <!-- type="submit" -->
         <p class="mt-5 mb-3 text-muted">MA3</p>
       </form>
     </main>

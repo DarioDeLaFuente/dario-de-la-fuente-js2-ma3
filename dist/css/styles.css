@@ -10769,12 +10769,19 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.products {
+  justify-content: center;
+  color: green;
+  font-size: larger;
+}
+
 .form-signin {
   margin-top: 10%;
 }
 
 .message {
   color: red;
+  margin: 10px;
 }
 
 @media (max-width: 576px) {
